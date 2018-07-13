@@ -13,10 +13,10 @@ spec:
           http:
             paths:
               - path: /result
-                - backend:
+                backend:
                     serviceName: result-service
                     servicePort: 31024
               - path: /voting
-                - backend:
+                backend:
                     serviceName: voting-service
                     servicePort: 32635
