@@ -4,23 +4,10 @@ kind: Ingress
 metadata:
     name: web-app
 spec:
-    tls:
-        - secretName: example-com-tls
-          hosts:
-            - example.com
     rules:
         - host: example.com
           http:
             paths:
-              - path: /
-                backend:
-                    serviceName: nginx
-                    servicePort: 80
-              - path: /result
-                backend:
-                    serviceName: result-service
-                    servicePort: 31024
-              - path: /voting
-                backend:
-                    serviceName: voting-service
-                    servicePort: 32635
+              - backend:
+                  serviceName: nginx
+                  servicePort: 80
