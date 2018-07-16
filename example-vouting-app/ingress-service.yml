@@ -14,7 +14,7 @@ spec:
             paths:
               - path: /
                 backend:
-                    serviceName: rnginx
+                    serviceName: nginx
                     servicePort: 80
               - path: /result
                 backend:
